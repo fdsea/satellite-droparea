@@ -1,0 +1,38 @@
+import { ElementCoords, EmitsList, OutputDropParameters, PayloadConfig, PositionAlign, Positions, RulesList } from './types';
+import { Rules } from "../rules";
+import { PositionsEnum } from "../enums";
+export declare class DRP extends Rules {
+    target: HTMLElement;
+    viewport: HTMLElement;
+    dropper: HTMLElement;
+    verticalOffset: number;
+    horizontalOffset: number;
+    viewportOffset: number;
+    customDropWidth: null | number;
+    verticalAlign: PositionAlign;
+    horizontalAlign: PositionAlign;
+    elementsCoords: ElementCoords;
+    currentPosition: Positions;
+    defaultPosition: PositionsEnum;
+    positionRules: RulesList;
+    emits: EmitsList;
+    positionsSteps: Array<string>;
+    constructor(payload: PayloadConfig);
+    private getPossiblePositions;
+    protected setRule(name: string, method: Function): void;
+    protected updateDropLink(dropElement: HTMLElement): void;
+    protected updateTargetLink(targetElement: HTMLElement): void;
+    protected updateViewportLink(ViewPortElement: HTMLElement): void;
+    private isTargetOutOfCheck;
+    protected getDropWidth(): number;
+    private getElementRectData;
+    private getDropperRectData;
+    private getTargetRectData;
+    private getViewPortSize;
+    emit(name: string, callback: () => void): void;
+    private calc;
+    private correctionPosition;
+    private setElementsBounding;
+    getElementsData(): ElementCoords | null;
+    getDropAreaOutputData(): OutputDropParameters | null;
+}

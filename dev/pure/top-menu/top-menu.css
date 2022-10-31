@@ -1,0 +1,19 @@
+.top-menu {
+    padding: 1rem;
+    box-shadow: 0 0 10px #aaa;
+    border-radius: 4px;
+    max-height: 400px;
+    overflow-y: auto;
+    position: fixed;
+    background-color: #fff;
+}
+
+.top-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.top-menu li {
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,34 @@
+.container {
+    padding: 10rem 5rem;
+    overflow: hidden;
+    border: 1px solid red;
+}
+
+.target {
+    max-width: 400px;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto;
+    position: relative;
+    left: -3rem
+}
+
+.drop {
+    border: 1px solid #999;
+    border-radius: 4px;
+    position: fixed;
+    background-color: #fff;
+}
+.drop__inner {
+    max-height: 100px;
+    overflow-y: auto;
+    padding: 1rem;
+}
+.drop__item {
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: 0.5rem;
+}
