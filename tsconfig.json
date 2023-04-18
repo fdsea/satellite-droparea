@@ -3,16 +3,16 @@
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
-    "types": "dist/core/index.d.ts",
-    "module": "es6",
+    "module": "commonjs",
     "target": "es5",
     "jsx": "react",
     "allowJs": true,
     "moduleResolution": "node",
     "declaration": true,
-    "baseUrl": "./",
+    "baseUrl": "./core",
     "paths": {
       "satellite-droparea": ["."]
     }
-  }
+  },
+  "exclude": ["node_modules", "dist"]
 }

@@ -1,7 +1,7 @@
 import { ElementCoords, EmitsList, OutputDropParameters, PayloadConfig, PositionAlign, Positions, RulesList } from './types';
 import { Rules } from "../rules";
 import { PositionsEnum } from "../enums";
-export declare class DRP extends Rules {
+export declare class SatelliteDroparea extends Rules {
     target: HTMLElement;
     viewport: HTMLElement;
     dropper: HTMLElement;
@@ -18,7 +18,7 @@ export declare class DRP extends Rules {
     emits: EmitsList;
     positionsSteps: Array<string>;
     constructor(payload: PayloadConfig);
-    private getPossiblePositions;
+    getPossiblePositions(): Array<Positions>;
     protected setRule(name: string, method: Function): void;
     protected updateDropLink(dropElement: HTMLElement): void;
     protected updateTargetLink(targetElement: HTMLElement): void;

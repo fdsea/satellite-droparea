@@ -1,9 +1,10 @@
 {
     "name": "satellite-droparea",
-    "version": "2.0.2",
+    "version": "2.0.6",
     "description": "",
     "types": "dist/core/index.d.ts",
     "main": "dist/index.js",
+    "files": ["dist"],
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "webpack serve --open --config webpack.dev.js",

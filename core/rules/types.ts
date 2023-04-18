@@ -21,5 +21,5 @@ export type PositionCheckerOffsetsPayload = {
 }
 
 export type CheckersList = {
-  [key: Positions]: (data: PositionCheckerDataPayload, offsets: PositionCheckerOffsetsPayload) => boolean
+  [key in Positions]: (data: PositionCheckerDataPayload, offsets: PositionCheckerOffsetsPayload) => boolean
 }

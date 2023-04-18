@@ -56,7 +56,7 @@ target.addEventListener('click', () => {
     verticalOffset: 10,
     horizontalOffset: 10,
     viewportOffset: 10,
-    positionSteps: ['left', 'bottom']
+    positionSteps: ['right', 'bottom']
   });
 
   updatePosition();
@@ -65,6 +65,7 @@ target.addEventListener('click', () => {
     console.log('out & close drop');
     closeDrop();
   });
+
 
 });
 
@@ -107,6 +108,9 @@ function updatePosition() {
     } = DPRInstance.getElementsData();
 
     if(!!dropper) {
+
+      console.log(DPRInstance.getPossiblePositions())
+
       dropper.style.width = `${width}px`;
       dropper.style.top = `${top}px`;
       dropper.style.left = `${left}px`;

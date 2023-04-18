@@ -34,8 +34,8 @@ export declare type OutputDropParameters = {
     top: number;
 };
 export declare type RulesList = {
-    [key: Positions]: () => OutputDropParameters;
+    [key: string]: () => OutputDropParameters;
 };
 export declare type EmitsList = {
-    [key: Emits]: () => void;
+    [key: string]: () => void;
 };

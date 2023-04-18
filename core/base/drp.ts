@@ -53,7 +53,7 @@ export class SatelliteDroparea extends Rules {
     this.lastPossiblePosition = this.currentPosition ?? this.positionsSteps[0];
   }
 
-  private getPossiblePositions(): Array<Positions> {
+  getPossiblePositions(): Array<Positions> {
     const list = this.positionsSteps.filter((position) => {
       const {
         tWidth: tw,

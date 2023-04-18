@@ -12,3 +12,5 @@ node_modules
 *.local
 *.log
 logs
+
+dist/
