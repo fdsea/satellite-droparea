@@ -1,3 +1,4 @@
+import { Positions } from "../base";
 export declare type PositionCheckerDataPayload = {
     dw: number;
     dh: number;
@@ -17,5 +18,5 @@ export declare type PositionCheckerOffsetsPayload = {
     y: number;
 };
 export declare type CheckersList = {
-    [key: string]: (data: PositionCheckerDataPayload, offsets: PositionCheckerOffsetsPayload) => boolean;
+    [key in Positions]: (data: PositionCheckerDataPayload, offsets: PositionCheckerOffsetsPayload) => boolean;
 };

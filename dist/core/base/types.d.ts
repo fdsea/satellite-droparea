@@ -5,13 +5,13 @@ export declare type PayloadConfig = {
     target: HTMLElement;
     viewport: HTMLElement;
     dropper: HTMLElement;
-    verticalOffset: number;
-    horizontalOffset: number;
-    viewportOffset: number;
-    customDropWidth: number | null;
-    verticalAlign: PositionAlign;
-    horizontalAlign: PositionAlign;
-    positionSteps: Array<string>;
+    verticalOffset?: number;
+    horizontalOffset?: number;
+    viewportOffset?: number;
+    customDropWidth?: number | null;
+    verticalAlign?: PositionAlign;
+    horizontalAlign?: PositionAlign;
+    positionSteps?: Array<string>;
 };
 export declare type ElementCoords = {
     tWidth: number;
@@ -34,8 +34,8 @@ export declare type OutputDropParameters = {
     top: number;
 };
 export declare type RulesList = {
-    [key: string]: () => OutputDropParameters;
+    [key in Positions]: () => OutputDropParameters;
 };
 export declare type EmitsList = {
-    [key: string]: () => void;
+    [key in Emits]: () => void;
 };
